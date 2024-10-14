@@ -63,8 +63,8 @@ Before you begin, ensure you have met the following requirements:
 
 ## File Structure
 
-- `app.py`: Main Flask application
-- `paper_downloader.py`: Contains functions for downloading papers from Hugging Face
+- `pdf_summariser.py`: Main Flask application
+- `researchpaper.py`: Contains functions for downloading papers from Hugging Face
 - `templates/index.html`: HTML template for the web interface
 - `static/style.css`: CSS styles for the web interface
 - `static/script.js`: JavaScript for handling user interactions and AJAX requests
