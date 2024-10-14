@@ -88,4 +88,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Your Name - [@sidmeht04](https://github.com/sidmehta04)
 
-Project Link: [https://github.com/yourusername/research-paper-tool](https://github.com/sidmehta04/Research_Paper_Chat/blob/main/README.md]([https://github.com/yourusername/research-paper-tool](https://github.com/sidmehta04/Research_Paper_Chat/blob/main/README.md))
+
