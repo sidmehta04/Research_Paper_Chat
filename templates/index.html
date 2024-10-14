@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Paper Downloader, Summarizer, and Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Research Paper Downloader, Summarizer, and Chat</h1>
+        
+        <section id="downloader" class="glass">
+            <h2>Download Papers</h2>
+            <input type="date" id="targetDate">
+            <input type="number" id="paperLimit" min="0" value="5">
+            <button id="downloadBtn">Download Papers</button>
+            <div id="downloadLoading" class="loading-indicator">
+                <div class="spinner"></div>
+                <p>Downloading papers...</p>
+            </div>
+            <p id="downloadStatus"></p>
+        </section>
+
+        <section id="fileSelector" class="glass">
+            <h2>Select PDF</h2>
+            <select id="pdfDir"></select>
+            <select id="pdfFile"></select>
+            <button id="processBtn">Process PDF</button>
+            <div id="processLoading" class="loading-indicator">
+                <div class="spinner"></div>
+                <p>Processing PDF...</p>
+            </div>
+        </section>
+
+        <section id="summary" class="glass">
+            <h2>Summary</h2>
+            <div id="summaryContent" class="content-box"></div>
+        </section>
+
+        <section id="qa" class="glass">
+            <h2>Ask Questions</h2>
+            <input type="text" id="question" placeholder="Ask a question about the paper">
+            <button id="askBtn">Ask</button>
+            <div id="askLoading" class="loading-indicator">
+                <div class="spinner"></div>
+                <p>Generating answer...</p>
+            </div>
+            <div id="answer" class="content-box"></div>
+        </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

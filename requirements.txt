@@ -1,0 +1,8 @@
+requests
+selenium
+streamlit
+PyPDF2
+google
+google-generativeai
+python-dotenv
+flask
