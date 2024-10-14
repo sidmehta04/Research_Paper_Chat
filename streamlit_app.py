@@ -175,16 +175,20 @@ def main():
 
         if selected_file:
             pdf_path = os.path.join('downloaded_papers', selected_dir, selected_file)
-            st.write(f"Processing: {selected_file}")
+            st.write(f"Selected: {selected_file}")
             
             # Extract text from PDF
             extracted_text = extract_text_from_pdf(pdf_path)
 
             if extracted_text:
                 st.session_state.pdf_content = extracted_text
-                with st.spinner('Generating detailed summary...'):
-                    st.session_state.summary = generate_summary(st.session_state.model, extracted_text)
-                st.success("PDF processed and summary generated successfully.")
+                st.success("PDF processed successfully.")
+                
+                # Add a button to generate summary
+                if st.button("Generate Detailed Summary"):
+                    with st.spinner('Generating detailed summary...'):
+                        st.session_state.summary = generate_summary(st.session_state.model, extracted_text)
+                    st.success("Summary generated successfully.")
             else:
                 st.error(f"Could not extract text from {selected_file}")
 
