@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, send_file
 import os
 from datetime import datetime
 from dotenv import load_dotenv
@@ -56,7 +56,7 @@ def generate_summary(text):
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return send_file('index.html')
 
 @app.route('/download_papers', methods=['POST'])
 def download_papers_route():
